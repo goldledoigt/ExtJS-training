@@ -4,7 +4,6 @@ Ext.onReady(function(){
 	
 	
 	function displayExemple(e, htmlEl, options){
-		console.log("pof",htmlEl);
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
 			var url = './examples/'+htmlEl.id + '/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({
@@ -12,7 +11,7 @@ Ext.onReady(function(){
 				callback: function(options, success, response){
 					panelCenter.body.select("#"+htmlEl.id+"-pre").update(response.responseText);
 					eval(response.responseText);
-					SyntaxHighlighter.highlight();
+					SyntaxHighlighter.highlight({},Ext.get(htmlEl.id+'-pre').dom);
 				}
 				
 			});
@@ -209,7 +208,11 @@ Ext.onReady(function(){
 							callback: function(options, success, response){
 								tab.update(response.responseText);
 								var exemples = tab.body.select(".exemple");
-								exemples.on('click', displayExemple );
+								exemples.on('click', displayExemple);
+								var codes = tab.body.select(".code");
+								codes.each(function(item){ 
+									SyntaxHighlighter.highlight({}, item.dom);
+								});
 							}
 						});
 						

@@ -14,8 +14,30 @@
     <br />
        
      <div class="box_content border">
-          	<div class="t3"><span class="surligne">Le scope</span></div><br>
-			<ul class="html_list"><li></li></ul>
+          	<div class="t3"><span class="surligne">Scope, Call & Apply</span></div><br>
+			<ul class="html_list"><li></li></ul><br>
+			<pre id="exscope1-pre" name="exscope1-pre" class="code brush: js">
+				var myfunc = function() {
+
+				   this.body = "pof";
+
+				   this.func = function(param1, param2) {
+				       console.log(arguments);
+				       console.log("func 1:" + this.body + " * " + param1 + " * " + param2);
+				   }
+				};
+
+				var myfunc2 = function() {
+				   this.body = "pif";
+				};
+
+				var f = new myfunc();
+				var f2 = new myfunc2();
+
+				f.func("toto", "1");
+				f.func.call(f2, "titi", "2");
+				f.func.apply(f2, ["tata", "3"]);
+			</pre>
 			<br />
     </div
 	<br />
@@ -66,7 +88,7 @@
                     <div id="exclass1-exec"></div>                    
                 </div>
                 <div class="box_right border">
-                    <pre id="exclass1-pre" class="brush: js"></pre>
+                    <pre id="exclass1-pre" name="exclass1-pre" class="brush: js"></pre>
                 </div>
                 <div style="clear:both"></div>
              </div>
@@ -85,7 +107,7 @@
                     <div id="exsingleton1-exec"></div>                    
                 </div>
                 <div class="box_right border">
-                    <pre id="exsingleton1-pre" class="brush: js"></pre>
+                    <pre id="exsingleton1-pre" name="exsingleton1-pre" class="brush: js"></pre>
                 </div>
                 <div style="clear:both"></div>
              </div>
@@ -93,3 +115,8 @@
     </div>
 	<br>
 </div>
+
+<script type="text/javascript">
+	SyntaxHighlighter.highlight({}, document.getElementById('exscope1-pre'));
+	
+</script>

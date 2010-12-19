@@ -1,4 +1,4 @@
-/* EXAMPLE 2, class
+/* EXAMPLE class
 ***************************************************/
 Example2 = function() {
 

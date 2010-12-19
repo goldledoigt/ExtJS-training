@@ -1,4 +1,4 @@
-/* EXAMPLE 1, singleton
+/* EXAMPLE singleton
 ***************************************************/
 Example1 = function() {
 
