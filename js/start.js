@@ -3,7 +3,7 @@ Ext.onReady(function(){
 	Ext.QuickTips.init();
 	
 	
-	function displayExemple(e, htmlEl, options, id){
+	function displayExemple(e, htmlEl, options, id) {
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
 			var url = './content/' + id + '/examples/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({
@@ -13,7 +13,6 @@ Ext.onReady(function(){
 					eval(response.responseText);
 					SyntaxHighlighter.highlight({},Ext.get(htmlEl.id+'-pre').dom);
 				}
-				
 			});
 			
 			Ext.get(htmlEl.id).set({done: "ok"});
@@ -157,7 +156,11 @@ Ext.onReady(function(){
 								title: node.text,	
 								closable: true,
 								id: node.id+'-tab',
-								autoScroll: true
+								autoScroll: true,
+								listeners:{
+								    render:function() {this.body.hide();}
+								    ,afterrender:function() {this.body.fadeIn();}
+								}
 						});	
 						panelCenter.add(tab).show();
 						Ext.Ajax.request({
@@ -171,6 +174,9 @@ Ext.onReady(function(){
 								codes.each(function(item){ 
 									SyntaxHighlighter.highlight({}, item.dom);
 								});
+								
+								console.log(node.id+'-tab');
+								
 							}
 						});
 						

@@ -114,6 +114,10 @@ a:hover {
 	border-bottom-color: transparent;
 }
 
+span.exemple {
+    color:#999999;
+}
+
 .exemple_link{
 	position: relative;
 	display: inline-block;

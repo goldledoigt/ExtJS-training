@@ -1,30 +1,25 @@
-/* EXAMPLE singleton
-***************************************************/
-Example1 = function() {
-
+var Person = function() {
+ 
     // private variable
-    var toto = 42;
-
+    var age = 42;
+  
     // private method
-    function getToto() {
-        return toto;
+    function getAge() {
+        return age;
     }
-
-    console.log("Example1 scope:", this);
-
+ 
     return {
         // public variable
-        titi:toto
-
+        name : "John"
         // public method
-        ,get:getToto
+        ,getPrivateDetails : function() {
+            return getAge();
+        }
+        
     }
+ 
+}();
 
-}(); // auto exec anonymous function to create singleton
+var details = Person.getPrivateDetails();
 
-console.log("Example1", Example1, Example1.titi, Example1.get());
-
-
-
-
-console.log("********************");
+Ext.get("exsingleton1-exec").update("name: " + Person.name + "<br />age: " + details);
