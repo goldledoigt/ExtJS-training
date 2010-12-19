@@ -1,0 +1,84 @@
+<div class="content_html">
+    <div class="t1">Les components ExtJS</div>
+    <div class="t2">Le Form</div>
+	<br>
+
+    <div class="text_into">
+    	bla bla sur le form.
+    </div>
+    <br />
+    <br />
+
+    <div class="box_content">
+        <div class="ex_container collapsed" id="form-container">
+            <div class="exemple_link">
+				<div class="exemple_arrow" id="form-arrow"></div>
+                <span class="exemple" id="form" done="ko">Exercice: création d'un form</span>
+            </div>
+            <div class="box_ex" id="form-box" style="display: none">
+                <div class="box_left">
+                    <div id="form-exec"></div>                    
+                </div>
+                <div class="box_right border">
+                    <pre id="form-pre" class="brush: js"></pre>
+                </div>
+                <div style="clear:both"></div>
+             </div>
+         </div>
+    </div>
+	<br>
+	    
+       
+     <div class="box_content border">
+          	<div class="t3"><span class="surligne">Les fields</span></div><br>
+			<div><pre class="code brush:js">
+				items: [
+					{fieldLabel: 'First Name', name: 'first', allowBlank: false},
+					{fieldLabel: 'Last Name', name: 'last'},
+					{fieldLabel: 'Email', name: 'email', vtype: 'email'}
+				],
+			</pre></div>
+			<br />
+    </div
+	<br />
+
+    <div class="box_content border">
+          	<div class="t3"><span class="surligne">Les buttons</span></div><br>
+			<div><pre class="code brush:js">
+				buttons: [
+					{
+						text: 'Save', 
+						handler: function() {
+							saveForm();
+						}
+					},{
+						text: 'Cancel',
+						handler: function() {
+							cancelForm();
+						}
+					}
+				]
+			</pre></div>
+			<br />
+    </div>
+	<br>
+
+    <div class="box_content border">
+            <div class="t3"><span class="surligne">Les valeurs par défaut</span></div><br>
+			<div><pre class="code brush:js">
+				defaults: {anchor:'0'},
+			</pre></div>
+			<br />
+    </div>
+    <br />
+	
+    <div class="box_content border">
+          	<div class="t3"><span class="surligne">La validation</span></div><br>
+
+			<br />
+    </div>
+	<br>
+	
+	
+		
+</div>

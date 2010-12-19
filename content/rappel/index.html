@@ -5,18 +5,36 @@
 
     <br />
     <br />
-    
+	    
     <div class="box_content border">
             <div class="t3"><span class="surligne">Création d'un projet Javascript</span></div><br>
             <ul class="html_list"><li></li></ul>
 			<br />
     </div>
     <br />
+
+    <div class="box_content">
+        <div class="ex_container collapsed" id="class-container">
+            <div class="exemple_link">
+            	<div class="exemple_arrow" id="class-arrow"></div>
+                <span class="exemple" id="class" done="ko">Exemple: création d'une classe</span>
+            </div>
+            <div class="box_ex" id="class-box" style="display: none">
+                <div class="box_left">
+                    <div id="class-exec"></div>                    
+                </div>
+                <div class="box_right border">
+                    <pre id="class-pre" name="class-pre" class="brush: js"></pre>
+                </div>
+                <div style="clear:both"></div>
+             </div>
+         </div>
+    </div>
+	<br>
        
      <div class="box_content border">
           	<div class="t3"><span class="surligne">Scope, Call & Apply</span></div><br>
-			<ul class="html_list"><li></li></ul><br>
-			<pre id="exscope1-pre" name="exscope1-pre" class="code brush: js">
+			<pre class="code brush: js">
 				var myfunc = function() {
 
 				   this.body = "pof";
@@ -50,20 +68,6 @@
 	<br />
 	
      <div class="box_content border">
-          	<div class="t3"><span class="surligne">Call</span></div><br>
-			<ul class="html_list"><li></li></ul>
-			<br />
-    </div
-	<br />
-	
-     <div class="box_content border">
-          	<div class="t3"><span class="surligne">Apply</span></div><br>
-			<ul class="html_list"><li></li></ul>
-			<br />
-    </div
-	<br />
-	
-     <div class="box_content border">
           	<div class="t3"><span class="surligne">Superclass ExtJS</span></div><br>
 			<ul class="html_list"><li></li></ul>
 			<br />
@@ -77,37 +81,20 @@
     </div
 	<br />
 	
-    <div class="box_content">
-        <div class="ex_container collapsed" id="exclass1-container">
-            <div class="exemple_link">
-            	<div class="exemple_arrow" id="exclass1-arrow"></div>
-                <span class="exemple" id="exclass1" done="ko">Exemple: création d'une classe</span>
-            </div>
-            <div class="box_ex" id="exclass1-box" style="display: none">
-                <div class="box_left">
-                    <div id="exclass1-exec"></div>                    
-                </div>
-                <div class="box_right border">
-                    <pre id="exclass1-pre" name="exclass1-pre" class="brush: js"></pre>
-                </div>
-                <div style="clear:both"></div>
-             </div>
-         </div>
-    </div>
-	<br>			
+			
 
     <div class="box_content">
-        <div class="ex_container collapsed" id="exsingleton1-container">
+        <div class="ex_container collapsed" id="singleton-container">
             <div class="exemple_link">
-            	<div class="exemple_arrow" id="exsingleton1-arrow"></div>
-                <span class="exemple" id="exsingleton1" done="ko">Exemple: création d'un singleton</span>
+            	<div class="exemple_arrow" id="singleton-arrow"></div>
+                <span class="exemple" id="singleton" done="ko">Exemple: création d'un singleton</span>
             </div>
-            <div class="box_ex" id="exsingleton1-box" style="display: none">
+            <div class="box_ex" id="singleton-box" style="display: none">
                 <div class="box_left">
-                    <div id="exsingleton1-exec"></div>                    
+                    <div id="singleton-exec"></div>                    
                 </div>
                 <div class="box_right border">
-                    <pre id="exsingleton1-pre" name="exsingleton1-pre" class="brush: js"></pre>
+                    <pre id="singleton-pre" name="singleton-pre" class="brush: js"></pre>
                 </div>
                 <div style="clear:both"></div>
              </div>
@@ -116,7 +103,3 @@
 	<br>
 </div>
 
-<script type="text/javascript">
-	SyntaxHighlighter.highlight({}, document.getElementById('exscope1-pre'));
-	
-</script>
