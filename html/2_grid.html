@@ -19,7 +19,7 @@
                     <div id="exgrid1-exec"></div>                    
                 </div>
                 <div class="box_right border">
-                    <pre id="exgrid1-pre" class="brush: js"></pre>
+                    <pre id="exgrid1-pre" class="brush:js"></pre>
                 </div>
                 <div style="clear:both"></div>
              </div>
@@ -34,7 +34,7 @@
 		<br />
 		
 		<div>
-			<pre name="code" name="code">var myData = [
+			<pre class="code brush:js">var myData = [
 	['3m Co',71.72,0.02,0.03,'9/1 12:00am'],
 	['Alcoa Inc',29.01,0.42,1.47,'9/1 12:00am'],
 	['Boeing Co.',75.43,0.53,0.71,'9/1 12:00am'],
@@ -62,7 +62,7 @@ var store = new Ext.data.ArrayStore({
           	<div class="t3"><span class="surligne">Les colonnes</span></div>
 			<br />
 			<div>
-			<pre name="code" name="code">columns : [
+			<pre class="code brush:js">columns : [
 	{id:'company', header: 'Company', width: 160, sortable: true, dataIndex: 'company'},
 	{header: 'Price', width: 75, sortable: true, renderer: 'usMoney', dataIndex: 'price'},
 	{header: 'Change', width: 75, sortable: true, /*renderer: change,*/ dataIndex: 'change'},
@@ -77,7 +77,7 @@ var store = new Ext.data.ArrayStore({
     <div class="box_content border">
           	<div class="t3"><span class="surligne">La view</span></div><br>
           	<div>
-				<pre name="code" name="code">viewConfig: {
+				<pre class="code brush:js">viewConfig: {
 	forceFit:true
 }</pre>
 			</div>
@@ -87,7 +87,7 @@ var store = new Ext.data.ArrayStore({
 	
     <div class="box_content border">
           	<div class="t3"><span class="surligne">Le selection model</span></div><br>
-          	<div><pre name="code" name="code">var selModel = new Ext.grid.CheckboxSelectionModel();</pre></div>
+          	<div><pre class="code brush:js">var selModel = new Ext.grid.CheckboxSelectionModel();</pre></div>
 			<br />
     </div>
 	<br />
