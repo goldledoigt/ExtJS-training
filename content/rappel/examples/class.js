@@ -22,4 +22,4 @@ var user = new Person();
 
 var details = user.getPrivateDetails();
 
-Ext.get("exclass1-exec").update("name: " + user.name + "<br />age: " + details);
+Ext.get("class-exec").update("name: " + user.name + "<br />age: " + details);

@@ -20,7 +20,7 @@ var store = new Ext.data.ArrayStore({
 var selModel = new Ext.grid.CheckboxSelectionModel();
 
 new Ext.grid.GridPanel({
-	renderTo: 'exgrid1-exec',
+	renderTo: 'grid-exec',
 	width: 400,
 	height: 310,
 	title: 'Grid',

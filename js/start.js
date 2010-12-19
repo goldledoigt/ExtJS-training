@@ -5,7 +5,7 @@ Ext.onReady(function(){
 	
 	function displayExemple(e, htmlEl, options, id) {
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
-			var url = './examples/'+htmlEl.id + '/' + htmlEl.id +'.js';
+			var url = './content/' + id + '/examples/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({
 				url: url,
 				callback: function(options, success, response){
@@ -72,18 +72,18 @@ Ext.onReady(function(){
 				children : [{
 					text: 'Présentation de ExtJS',
                 	leaf: true,
-					id: '1_intro',
-					url: './html/1_intro.html'
+					id: 'presentation',
+					url: './content/presentation/index.html'
 				},{
 					text: 'Environnement de développement',
                 	leaf: true,
-					id: '1_install',
-					url: './html/1_install.html'
+					id: 'installation',
+					url: './content/installation/index.html'
 				},{
 					text: 'Rappel des basiques de Javascript',
                 	leaf: true,
-					id: '1_rappel',
-					url: './html/1_rappel.html'				
+					id: 'rappel',
+					url: './content/rappel/index.html'				
 				}]
             },{
                 text: 'Les components ExtJS',
@@ -92,43 +92,23 @@ Ext.onReady(function(){
 				children : [{
 					text: 'Le Grid',
                 	leaf: true,
-					id: '2_grid',
-					url: './html/2_grid.html'
+					id: 'grid',
+					url: './content/grid/index.html'
 				},{
 					text: 'Le Form',
                 	leaf: true,
-					id: '2_form',
-					url: './html/2_form.html'
+					id: 'form',
+					url: './content/form/index.html'
 				}]
             },{
                 text: 'Les layouts ExtJS',
                 leaf: false,
 				expanded: false,
 				children : [{
-					text: 'Viewport',
+					text: 'Les layouts',
                 	leaf: true,
-					id: '3_viewport',
-					url: './html/3_viewport.html'
-				},{
-					text: 'Colonnes',
-                	leaf: true,
-					id: '3_colonnes',
-					url: './html/3_colonnes.html'
-				},{
-					text: 'Border',
-                	leaf: true,
-					id: '3_border',
-					url: './html/3_border.html'
-				},{
-					text: 'VBox & Hbox',
-                	leaf: true,
-					id: '3_vboxhbox',
-					url: './html/3_vboxhbox.html'
-				},{
-					text: 'Nested layouts',
-                	leaf: true,
-					id: '3_nested',
-					url: './html/3_nested.html'					
+					id: 'layouts',
+					url: './content/layouts/index.html'
 				}]
             },{
                 text: 'Manipulation des components',
@@ -137,39 +117,14 @@ Ext.onReady(function(){
 				children : [{
 					text: 'Extension d\'un component',
                 	leaf: true,
-					id: '4_extension',
-					url: './html/4_extension.html'
+					id: 'extension',
+					url: './content/extension/index.html'
 				},{
-					text: 'Communication entre 2 components',
+					text: 'Interactions entre 2 components',
                 	leaf: true,
-					id: '4_communication',
-					url: './html/4_communication.html'
-				},{
-					text: 'Gestion des évenements',
-                	leaf: true,
-					id: '4_evenements',
-					url: './html/4_evenements.html'
-				},{
-					text: 'Gestion du scope',
-                	leaf: true,
-					id: '4_scope',
-					url: './html/4_scope.html'									
-	           }]
-	      /*  },{
-	            text: 'Intéractions entre components',
-	            leaf: false,
-				expanded: false,
-				children : [{
-					text: 'Communication, evénements, scope',
-	            	leaf: true,
-					id: '6_interactions',
-					url: './html/6_interactions.html'
-				},{
-					text: 'Exemple',
-	            	leaf: true,
-					id: '6_exercice',
-					url: './html/6_exercice.html'
-				}]*/
+					id: 'interactions',
+					url: './content/interactions/index.html'
+				}]
 	        },{
 	            text: 'Création d\'un projet ExtJS',
 	            leaf: false,
