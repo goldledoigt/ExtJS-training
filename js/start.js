@@ -5,7 +5,7 @@ Ext.onReady(function(){
 	
 	function displayExemple(e, htmlEl, options){
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
-			var url = './'+htmlEl.id + '/' + htmlEl.id +'.js';
+			var url = './examples/'+htmlEl.id + '/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({
 				url: url,
 				callback: function(options, success, response){
