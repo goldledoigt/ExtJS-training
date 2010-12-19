@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+
+BODY{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-color:#666666; 
+	background-position: center; 
+	padding:0; 
+	margin: 0;
+}
+
+.smallfont{
+	font-size: 10px;
+}
+
+.header{
+	height:45px;
+	color:#ff870a; 
+	background-color: #FFFFFF; 
+	padding: 3px 0 0 3px;
+}
+
+.info_login{
+	float:right;
+	text-align:right;
+	padding-right:10px;
+}
+
+.logo{
+	float:left;
+	font-size:18px;
+	font-weight:bold;
+	background:url(../images/valtech.gif) no-repeat 5px 5px;
+	height:50px;
+	padding-left: 100px;
+	padding-top: 10px;
+	overflow:hidden;
+	color:#ff870a; 
+}
+
+.login_wrapper{
+	position:absolute;
+   	left: 35%;
+	top: 25%;
+	height:550px;
+	width:450px;
+	
+}
+
+.login{
+	float:left;
+	border:1px solid #BABABA;
+	padding:50px 0 0 100px;
+	color:#323232;
+	font-weight:bold;
+	height:200px;
+	width:350px;
+	background:url(../images/rotator4.jpg) no-repeat left bottom;
+}
+
+.x-panel-header-text {
+	font-weight:bold;
+}
+
+.t1{
+	font-size:18px;
+	font-weight:bold;
+	color: #666666;
+}
+.t2{
+	font-size:16px;
+	font-weight:bold;
+	color: #999999;
+}
+.t3{
+	font-size:12px;
+	font-weight:bold;
+	color: #666666;
+}
+.box_content{
+	font-size:12px;
+	color: #666666;
+	padding: 5px 5px 5px 5px;
+}
+
+.border{
+	border: thin #CCCCCC;
+	border-style: dashed; 
+}
+
+.ex_container{
+	border: 1px solid #ff870a;
+	padding: 0px 5px 5px 5px;
+}
+
+.collapsed{
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.exemple_link{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	color: #ff870a;
+	font-weight: bold;
+	margin-top: -8px;
+	margin-left: 15px;
+	padding: 0px 5px 0px 5px;
+	background: #FFF;
+}
+
+.exemple_arrow{
+    float: left !important;
+    margin-left: 0;
+    margin-right: 3px;	
+	margin-top: 3px;
+	height: 8px;
+	width: 8px;
+	background-image: url(../images/fleches.jpg);
+}
+
+.expanded{
+	background-position: 0 -8px;
+}
+
+.bullet_paraph{
+	margin-left:30px;
+	font-size:12px;
+	color:#999999;
+}
+.sous-bullet{
+	margin-left:20px;
+	font-size:11px;
+	color: #666666;
+}
+
+
+.box_content .box_ex .box_left{
+	position: relative;
+	float: left;
+	width: 59%;
+	margin-top: 10px;
+	xoverflow:scroll; 
+}
+.box_content .box_ex .box_right{
+	position: relative;
+	float: right;
+	width: 40%;
+	height: 500px;
+	margin-top: 10px;
+	overflow: auto; 
+}
+.generate{
+	position: relative;
+	float: right;
+}
+.generate .btn_generate{
+	color: #ff870a;
+	text-align:right;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 10px;
+	list-style-image: url(../images/arrow.gif);
+}
+
+.content_html{
+	color: #666666;
+	padding: 5px 3px 3px 7px;
+	font-size:12px;
+}
+
+ul.html_list{
+	margin-left:20px;
+	list-style-image: url(../images/arrow.gif);
+}
+
+.surligne{
+	color: #ff870a;
+	xtext-decoration:underline;
+	font-weight:bold;
+}
+.surligne2{
+	color: #333333;
+	xtext-decoration:underline;
+	font-weight:bold;
+}
+
+td{
+font-size:12px;
+}
