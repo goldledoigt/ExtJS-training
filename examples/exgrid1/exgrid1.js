@@ -19,7 +19,7 @@ var store = new Ext.data.ArrayStore({
 
 
 new Ext.grid.GridPanel({
-	renderTo: 'exgrid-exec',
+	renderTo: 'exgrid1-exec',
 	width: 400,
 	height: 300,
 	title: 'Grid',
