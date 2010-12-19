@@ -56,7 +56,9 @@ Ext.onReady(function(){
 	
 	var panelWest = new Ext.tree.TreePanel({
 		region: 'west',
-		margins:'3 3 3 0', 
+		margins:'3 3 3 0',
+		cmargins:'3',
+		useArrows:true,
 		width: 250,
 		minSize: 200,
 		maxSize: 300, 
@@ -209,7 +211,8 @@ Ext.onReady(function(){
 							callback: function(options, success, response){
 								tab.update(response.responseText);
 								var exemples = tab.body.select(".exemple");
-								exemples.on('click', displayExemple );
+								exemples.on('click', displayExemple);
+								SyntaxHighlighter.highlightAll("code");
 							}
 						});
 						
@@ -228,15 +231,16 @@ Ext.onReady(function(){
 		
 	var viewport = new Ext.Viewport({
 		layout: 'border',
-		items: [ 
-		 	new Ext.BoxComponent({
-				region: 'north',
-				el: 'header'
-			}),
-			panelWest,
-			panelCenter
+		items:[{
+            region:'north'
+            ,height:41
+            ,contentEl:'header'
+		}
+		,panelWest
+		,panelCenter
  		]
 	});
+
 });
 
 
