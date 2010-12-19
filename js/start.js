@@ -3,7 +3,7 @@ Ext.onReady(function(){
 	Ext.QuickTips.init();
 	
 	
-	function displayExemple(e, htmlEl, options){
+	function displayExemple(e, htmlEl, options, id) {
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
 			var url = './examples/'+htmlEl.id + '/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({
@@ -13,7 +13,6 @@ Ext.onReady(function(){
 					eval(response.responseText);
 					SyntaxHighlighter.highlight({},Ext.get(htmlEl.id+'-pre').dom);
 				}
-				
 			});
 			
 			Ext.get(htmlEl.id).set({done: "ok"});
@@ -202,7 +201,11 @@ Ext.onReady(function(){
 								title: node.text,	
 								closable: true,
 								id: node.id+'-tab',
-								autoScroll: true
+								autoScroll: true,
+								listeners:{
+								    render:function() {this.body.hide();}
+								    ,afterrender:function() {this.body.fadeIn();}
+								}
 						});	
 						panelCenter.add(tab).show();
 						Ext.Ajax.request({
@@ -210,12 +213,15 @@ Ext.onReady(function(){
 							callback: function(options, success, response){
 								tab.update(response.responseText);
 								var exemples = tab.body.select(".exemple");
-								exemples.on('click', displayExemple);
+								exemples.on('click', displayExemple.createDelegate(this, [node.id], true));
 
 								var codes = tab.body.select(".code");
 								codes.each(function(item){ 
 									SyntaxHighlighter.highlight({}, item.dom);
 								});
+								
+								console.log(node.id+'-tab');
+								
 							}
 						});
 						

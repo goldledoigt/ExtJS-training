@@ -1,32 +1,25 @@
-/* EXAMPLE class
-***************************************************/
-Example2 = function() {
-
+var Person = function() {
+ 
     // private variable
-    var toto = 42;
-
+    var age = 42;
+ 
     // public variable
-    this.titi = toto;
-
+    this.name = "John";
+ 
     // private method
-    function getToto() {
-        return toto;
+    function getAge() {
+        return age;
     }
-
+ 
     // public method
-    this.get = function() {
-        return getToto();
+    this.getPrivateDetails = function() {
+        return getAge();
     }
-
-    console.log("Example2 scope:", this);
-
+ 
 };
 
-e2 = new Example2();
+var user = new Person();
 
-console.log("Example2", e2, e2.titi, e2.get());
+var details = user.getPrivateDetails();
 
-
-
-
-console.log("********************");
+Ext.get("exclass1-exec").update("name: " + user.name + "<br />age: " + details);

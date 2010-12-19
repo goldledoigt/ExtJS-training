@@ -24,7 +24,6 @@ new Ext.grid.GridPanel({
 	width: 400,
 	height: 310,
 	title: 'Grid',
-	collapsible: true,
 	store: store,
 	viewConfig: {
 	    forceFit:true
