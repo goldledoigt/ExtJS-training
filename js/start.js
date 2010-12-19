@@ -4,6 +4,7 @@ Ext.onReady(function(){
 	
 	
 	function displayExemple(e, htmlEl, options){
+		console.log("pof",htmlEl);
 		if (Ext.get(htmlEl.id).getAttribute("done") == "ko"){
 			var url = './examples/'+htmlEl.id + '/' + htmlEl.id +'.js';
 			var js = Ext.Ajax.request({

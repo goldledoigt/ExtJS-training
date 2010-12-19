@@ -1,5 +1,5 @@
 new Ext.FormPanel({
-	renderTo: 'exform-exec',
+	renderTo: 'exform1-exec',
 	width: 400,
 	height: 300,
 	title: 'Form',
