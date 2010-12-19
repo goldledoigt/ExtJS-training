@@ -130,15 +130,10 @@ Ext.onReady(function(){
 	            leaf: false,
 				expanded: false,
 				children : [{
-					text: 'Définition du projet',
+					text: 'Définition et assemlage du projet',
 	            	leaf: true,
-					id: '5_defproj',
-					url: './html/5_defproj.html'
-				},{
-					text: 'Assemblage du projet',
-	            	leaf: true,
-					id: '5_assemblage',
-					url: './html/5_assemblage.html'
+					id: 'projet',
+					url: './content/projet/index.html'
 				}]
 
 			}]
