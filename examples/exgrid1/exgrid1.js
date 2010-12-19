@@ -17,15 +17,21 @@ var store = new Ext.data.ArrayStore({
 	data: myData
 });
 
+var selModel = new Ext.grid.CheckboxSelectionModel();
 
 new Ext.grid.GridPanel({
 	renderTo: 'exgrid1-exec',
 	width: 400,
-	height: 300,
+	height: 310,
 	title: 'Grid',
 	collapsible: true,
 	store: store,
+	viewConfig: {
+	    forceFit:true
+	},
+	selModel:selModel,
 	columns : [
+	    selModel,
 		{id:'company', header: 'Company', width: 160, sortable: true, dataIndex: 'company'},
 		{header: 'Price', width: 75, sortable: true, renderer: 'usMoney', dataIndex: 'price'},
 		{header: 'Change', width: 75, sortable: true, /*renderer: change,*/ dataIndex: 'change'},
