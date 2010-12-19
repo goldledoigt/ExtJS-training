@@ -22,4 +22,4 @@ var Person = function() {
 
 var details = Person.getPrivateDetails();
 
-Ext.get("exsingleton1-exec").update("name: " + Person.name + "<br />age: " + details);
+Ext.get("singleton-exec").update("name: " + Person.name + "<br />age: " + details);
