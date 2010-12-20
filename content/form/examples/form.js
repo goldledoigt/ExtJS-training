@@ -1,16 +1,16 @@
-function saveForm(){
+function saveForm() {
 	Ext.MessageBox.alert('Save', 'Changes saved successfully.');	
 }
-function cancelForm(){
+
+function cancelForm() {
 	Ext.MessageBox.alert('Cancel', 'Cancel');	
 }
 
 new Ext.FormPanel({
 	renderTo: 'form-exec',
 	width: 400,
-	height: 300,
+	height: 310,
 	title: 'Form',
-	collapsible: true,
 	labelWidth: 75,
 	defaults: {anchor:'0'},
 	bodyStyle:'padding:5px 5px 0',

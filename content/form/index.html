@@ -3,10 +3,8 @@
     <div class="t2">Le Form</div>
 	<br>
 
-    <div class="text_into">
-    	bla bla sur le form.
-    </div>
-    <br />
+    <div class="text_into"></div>
+
     <br />
 
     <div class="box_content">
@@ -26,58 +24,56 @@
              </div>
          </div>
     </div>
-	<br>
-	    
+
+	<br />	    
        
      <div class="box_content border">
           	<div class="t3"><span class="surligne">Les fields</span></div><br>
-			<div><pre class="code brush:js">
-				items: [
-					{fieldLabel: 'First Name', name: 'first', allowBlank: false},
-					{fieldLabel: 'Last Name', name: 'last'},
-					{fieldLabel: 'Email', name: 'email', vtype: 'email'}
-				],
-			</pre></div>
+			<div><pre class="code brush:js">items: [
+	{fieldLabel: 'First Name', name: 'first', allowBlank: false},
+	{fieldLabel: 'Last Name', name: 'last'},
+	{fieldLabel: 'Email', name: 'email', vtype: 'email'}
+]</pre></div>
 			<br />
-    </div
+    </div>
 	<br />
 
     <div class="box_content border">
-          	<div class="t3"><span class="surligne">Les buttons</span></div><br>
-			<div><pre class="code brush:js">
-				buttons: [
-					{
-						text: 'Save', 
-						handler: function() {
-							saveForm();
-						}
-					},{
-						text: 'Cancel',
-						handler: function() {
-							cancelForm();
-						}
-					}
-				]
-			</pre></div>
+		<div class="t3"><span class="surligne">Les boutons</span></div>
+		<br />
+		<div><pre class="code brush:js">buttons:[{
+	text: 'Save',
+	handler: function() {
+		saveForm();
+	}
+}, {
+	text: 'Cancel',
+	handler: function() {
+		cancelForm();
+	}
+}]</pre></div>
 			<br />
     </div>
-	<br>
+
+	<br />
 
     <div class="box_content border">
-            <div class="t3"><span class="surligne">Les valeurs par défaut</span></div><br>
-			<div><pre class="code brush:js">
-				defaults: {anchor:'0'},
-			</pre></div>
-			<br />
+		<div class="t3"><span class="surligne">Les valeurs par défaut</span></div>
+		<br />
+		<div><pre class="code brush:js">defaults: {anchor:'0'}</pre></div>
+		<br />
     </div>
+
     <br />
 	
     <div class="box_content border">
-          	<div class="t3"><span class="surligne">La validation</span></div><br>
-
-			<br />
+		<div class="t3"><span class="surligne">La validation</span></div>
+		<br />
+		<div><pre class="code brush:js">{fieldLabel: 'Email', name: 'email', vtype: 'email'}</pre></div>
+		<br />
     </div>
-	<br>
+
+	<br />
 	
 	
 		

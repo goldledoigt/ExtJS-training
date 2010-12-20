@@ -175,8 +175,6 @@ Ext.onReady(function(){
 									SyntaxHighlighter.highlight({}, item.dom);
 								});
 								
-								console.log(node.id+'-tab');
-								
 							}
 						});
 						
