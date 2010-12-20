@@ -6,111 +6,138 @@
 
     <div class="box_content">
 		<div class="t3"><span class="surligne">Class & Singleton</span></div>
-		<br />
-		Il est possible de créer plusieurs instances d'une même classe grâce à l'appel "New".
-		<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="class-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="class-arrow"></div>
-	                <span class="exemple" id="class" done="ko">Création d'une classe</span>
-	            </div>
-	            <div class="box_ex" id="class-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="class-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="class-pre" class="brush: js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
-		<br />
-		Le singleton quant à lui est un objet qui ne doit être instancié et initialisé qu'une fois.
-		<br /><br />
-	    <div class="box_content">
-	        <div class="ex_container collapsed" id="singleton-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="singleton-arrow"></div>
-	                <span class="exemple" id="singleton" done="ko">Création d'un singleton</span>
-	            </div>
-	            <div class="box_ex" id="singleton-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="singleton-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="singleton-pre" class="brush: js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
+
+		<ul class="html_list">
+			<br />
+			<li>Class
+				<br /><br />
+				Il est possible de créer plusieurs instances d'une même classe grâce à l'appel "New".
+				<br /><br />
+				<div class="box_content">
+			        <div class="ex_container collapsed" id="class-container">
+			            <div class="exemple_link">
+			            	<div class="exemple_arrow" id="class-arrow"></div>
+			                <span class="exemple" id="class" done="ko">Création d'une classe</span>
+			            </div>
+			            <div class="box_ex" id="class-box" style="display: none">
+			                <div class="box_left">
+			                    <div id="class-exec"></div>                    
+			                </div>
+			                <div class="box_right border">
+			                    <pre id="class-pre" class="brush: js"></pre>
+			                </div>
+			                <div style="clear:both"></div>
+			             </div>
+			         </div>
+			    </div>
+			</li>
+			<br />
+			<li>Singleton
+				<br /><br />
+				Le singleton quant à lui est un objet qui ne doit être instancié et initialisé qu'une fois.
+				<br /><br />
+			    <div class="box_content">
+			        <div class="ex_container collapsed" id="singleton-container">
+			            <div class="exemple_link">
+			            	<div class="exemple_arrow" id="singleton-arrow"></div>
+			                <span class="exemple" id="singleton" done="ko">Création d'un singleton</span>
+			            </div>
+			            <div class="box_ex" id="singleton-box" style="display: none">
+			                <div class="box_left">
+			                    <div id="singleton-exec"></div>                    
+			                </div>
+			                <div class="box_right border">
+			                    <pre id="singleton-pre" class="brush: js"></pre>
+			                </div>
+			                <div style="clear:both"></div>
+			             </div>
+			         </div>
+			    </div>
+			</li>
+		</ul>
     </div>
 
     <br />
 
 	<div class="box_content">
-		<div class="t3"><span class="surligne">Scope, Call, Apply & createDelegate</span></div>
-		<br />
-		La fonction call permet donc de changer le scope de la fonction appelée: fct.call(obj, p1, p2) exécute la fonction fct(p1,p2) comme si elle était définie à l'intérieur de l'objet obj.
-		<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="call-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="call-arrow"></div>
-	                <span class="exemple" id="call" done="ko">Utilisation de la méthode call()</span>
-	            </div>
-	            <div class="box_ex" id="call-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="call-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="call-pre" class="brush: js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
-		<br />
-		L'objectif de la fonction apply est le même, mais ses arguments sont différents : fct.apply(obj, args) a le même effet que call, mais les arguments sont regroupés dans un tableau.<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="apply-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="apply-arrow"></div>
-	                <span class="exemple" id="apply" done="ko">Utilisation de la méthode apply()</span>
-	            </div>
-	            <div class="box_ex" id="apply-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="apply-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="apply-pre" class="brush:js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
-		<br />
-		L'objectif de createDelegate est également de changer le scope de la fonction en question mais sans exécuter la fonction. createDelegate est une fonction de ExtJS (class Function), contrairement à call et apply qui sont des fonctions Javascript.
-		<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="createdelegate-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="createdelegate-arrow"></div>
-	                <span class="exemple" id="createdelegate" done="ko">Utilisation de la méthode createDelegate()</span>
-	            </div>
-	            <div class="box_ex" id="createdelegate-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="createdelegate-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="createdelegate-pre" class="brush:js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
+		<div class="t3"><span class="surligne">Les méthodes call, apply & createDelegate</span></div>
+
+		<ul class="html_list">
+			<br />
+			<li>call(scope, arg1, arg2, ...)
+				<br /><br />
+				La méthode call permet de changer le scope de la fonction appelée:<br />
+				fct.call(obj, p1, p2) exécute la fonction fct(p1,p2) comme si elle était définie à l'intérieur de l'objet obj.
+				<br /><br />
+				<div class="box_content">
+			        <div class="ex_container collapsed" id="call-container">
+			            <div class="exemple_link">
+			            	<div class="exemple_arrow" id="call-arrow"></div>
+			                <span class="exemple" id="call" done="ko">Utilisation de la méthode call()</span>
+			            </div>
+			            <div class="box_ex" id="call-box" style="display: none">
+			                <div class="box_left">
+			                    <div id="call-exec"></div>                    
+			                </div>
+			                <div class="box_right border">
+			                    <pre id="call-pre" class="brush: js"></pre>
+			                </div>
+			                <div style="clear:both"></div>
+			             </div>
+			         </div>
+			    </div>
+			</li>
+			<br />
+			<li>apply(scope, [arg1, arg2, ...])
+				<br /><br />
+				L'objectif de la méthode apply est le même celui de la méthode call, mais ses arguments sont différents:<br />
+				fct.apply(obj, args) a le même effet que call, mais les arguments sont regroupés dans un tableau.
+				<br /><br />
+				<div class="box_content">
+			        <div class="ex_container collapsed" id="apply-container">
+			            <div class="exemple_link">
+			            	<div class="exemple_arrow" id="apply-arrow"></div>
+			                <span class="exemple" id="apply" done="ko">Utilisation de la méthode apply()</span>
+			            </div>
+			            <div class="box_ex" id="apply-box" style="display: none">
+			                <div class="box_left">
+			                    <div id="apply-exec"></div>                    
+			                </div>
+			                <div class="box_right border">
+			                    <pre id="apply-pre" class="brush:js"></pre>
+			                </div>
+			                <div style="clear:both"></div>
+			             </div>
+			         </div>
+			    </div>
+			</li>
+			<br />
+			<li>createDelagate(scope, [arg1, arg2, ...], argsIndex) : Function
+				<br /><br />
+				L'objectif de createDelegate est également de changer le scope d'une fonction, mais sans l'exécuter. Cette méthode renvoie une référence à la fonction qui pourra etre exécutée ultérieurement.
+				createDelegate est une méthode d'ExtJS (class Function), contrairement à call et apply qui sont des fonctions Javascript.
+				<br /><br />
+				<div class="box_content">
+			        <div class="ex_container collapsed" id="createdelegate-container">
+			            <div class="exemple_link">
+			            	<div class="exemple_arrow" id="createdelegate-arrow"></div>
+			                <span class="exemple" id="createdelegate" done="ko">Utilisation de la méthode createDelegate()</span>
+			            </div>
+			            <div class="box_ex" id="createdelegate-box" style="display: none">
+			                <div class="box_left">
+			                    <div id="createdelegate-exec"></div>                    
+			                </div>
+			                <div class="box_right border">
+			                    <pre id="createdelegate-pre" class="brush:js"></pre>
+			                </div>
+			                <div style="clear:both"></div>
+			             </div>
+			         </div>
+			    </div>
+			</li>
+		</ul>
+	
+	
 	</div>
 
 	<br />
@@ -162,6 +189,27 @@
 	             </div>
 	         </div>
 	    </div>
+		<!-- <br />
+		<div class="box_content">
+	        <div class="ex_container collapsed" id="scripttagproxy-container">
+	            <div class="exemple_link">
+	            	<div class="exemple_arrow" id="scripttagproxy-arrow"></div>
+	                <span class="exemple" id="scripttagproxy" done="ko">Création d'une requete scripttagproxy avec ScriptTagProxy</span>
+	            </div>
+	            <div class="box_ex" id="scripttagproxy-box" style="display: none">
+	                <div class="box_left">
+	                    <div id="scripttagproxy-exec">
+							<div id="scripttagproxy-button"></div>
+	                    	<div id="scripttagproxy-info" style="height:200px"></div>
+	                    </div>                    
+	                </div>
+	                <div class="box_right border">
+	                    <pre id="scripttagproxy-pre" class="brush:js"></pre>
+	                </div>
+	                <div style="clear:both"></div>
+	             </div>
+	         </div>
+	    </div> -->
 	</div>
 	
 	<br />
