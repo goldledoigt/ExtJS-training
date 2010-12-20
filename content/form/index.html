@@ -3,9 +3,17 @@
     <div class="t2">Le Form</div>
 	<br>
 
-    <div class="text_into"></div>
-
-    <br />
+    <div class="text_into">
+    	Le form d'ExtJS permet de créer des <span class="surligne">formulaires</span> facilement : <br>
+		<div class="bullet_paraph">
+		&bull; Le layout du form est géré automatiquement grâce au "form layout" défini par défaut<br>
+		&bull; Toutes les options de configuration du BasicForm sont disponibles directement dans le FormPanel<br>
+		&bull; Les contrôles sur les champs sont facilités grâce à l'option vtype qui intègre les contrôles les plus courants : email, url, alpha, et alphanum.<br><br>
+		</div>
+		Par défaut le formulaire est submit en <span class="surligne">Ajax</span>, mais il est possible d'utiliser le submit classique avec l'option standardSubmit.   
+		
+    </div>
+    <br /><br>
 
     <div class="box_content">
         <div class="ex_container collapsed" id="form-container">
@@ -29,6 +37,9 @@
        
      <div class="box_content border">
           	<div class="t3"><span class="surligne">Les fields</span></div><br>
+			Les champs du formulaires sont définis dans l'option <span class="surligne">items</span> du FormPanel sous forme d'un tableau.<br><br>
+			Chaque champ est défini avec un <span class="surligne">label</span>, un <span class="surligne">name</span>, et un <span class="surligne">xtype</span> permettant de définir le type de champ (ex : checkbox, combo, datefield, displayfield, radio, textarea, textfield, timefield...). Toutes les options de configuration du xtype en question sont ensuite disponibles. <br><br>
+			Si le xtype n'est pas défini alors le type de champ par défaut sera utilisé. C'est l'option <span class="surligne">defaultType</span> du FormPanel qui permet de définir le type de champ par défaut (ex ici: textfield).<br><br>
 			<div><pre class="code brush:js">items: [
 	{fieldLabel: 'First Name', name: 'first', allowBlank: false},
 	{fieldLabel: 'Last Name', name: 'last'},
@@ -41,6 +52,9 @@
     <div class="box_content border">
 		<div class="t3"><span class="surligne">Les boutons</span></div>
 		<br />
+		L'option buttons du FormPanel permet d'ajouter des bouttons dans le <span class="surligne">footer</span> du FormPanel.<br><br>
+		L'option <span class="surligne">type</span> permet de définir le type de boutton : 'submit', 'reset', ou 'button'. <br>
+		Par défaut le type est 'button'. On utilise alors un <span class="surligne">handler</span> pour définir le comportement à appliquer au boutton.<br><br>
 		<div><pre class="code brush:js">buttons:[{
 	text: 'Save',
 	handler: function() {
@@ -60,6 +74,9 @@
     <div class="box_content border">
 		<div class="t3"><span class="surligne">Les valeurs par défaut</span></div>
 		<br />
+		L'option <span class="surligne">defaults</span> du FormPanel permet de définir des valeurs par défaut qui seront appliquées à <span class="surligne">tous les items</span> du FormPanel.
+		Elle récupère une <span class="surligne">liste d'options de configuration</span> applicable à chaque item.<br><br>
+		ex : forcer tous les champs à être remplis en rajoutant dans defaults "allowBlank: false", appliquer un layout à tous les champs, ...<br><br> 
 		<div><pre class="code brush:js">defaults: {anchor:'0'}</pre></div>
 		<br />
     </div>
@@ -69,6 +86,10 @@
     <div class="box_content border">
 		<div class="t3"><span class="surligne">La validation</span></div>
 		<br />
+		ExtJS fournit une classe (singleton) <span class="surligne">Vtypes</span> contenant les fonctions de validation <span class="surligne">basiques</span> les plus couramment utilisées dans les formulaires (email, url, caractères spéciaux, ...).<br>
+		L'ajout de l'option vtype à la définition d'un champ intègre le contrôle voulu. <br><br>
+		Il est possible de <span class="surligne">créer ses propres vtype</span> (ex: time, IP,...).<br><br>
+		
 		<div><pre class="code brush:js">{fieldLabel: 'Email', name: 'email', vtype: 'email'}</pre></div>
 		<br />
     </div>
