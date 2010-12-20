@@ -23,6 +23,7 @@ new Ext.grid.GridPanel({
 	renderTo: 'grid-exec',
 	width: 400,
 	height: 310,
+	frame:true,
 	title: 'Grid',
 	store: store,
 	viewConfig: {
@@ -35,7 +36,7 @@ new Ext.grid.GridPanel({
 		{header: 'Price', width: 75, sortable: true, renderer: 'usMoney', dataIndex: 'price'},
 		{header: 'Change', width: 75, sortable: true, /*renderer: change,*/ dataIndex: 'change'},
 		{header: '% Change', width: 75, sortable: true, /*renderer: pctChange,*/ dataIndex: 'pctChange'},
-		{header: 'Last Updated', width: 85, sortable: true, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
+		{header: 'Update', width: 85, sortable: true, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
 	]
 
 });

@@ -5,9 +5,11 @@
 	<br />
 
     <div class="text_into">
-    	Pourquoi faire une extension ? dans quels cas ?  
+		Ex.extend sert à la création des classes Ext JS. Il permet:
 		<div class="bullet_paraph">
-
+			&bull; D'étendre des classes Ext JS pour créer de nouvelles héritants des propriétés et méthodes des classes d'origines.<br />
+			&bull; De créer des classes qui pourront etre à leur tour étendue.<br />
+			&bull; De créer d'objets modulaires, pouvant s'imbriquer dans d'autres objets ou intéragir avec d'autres objets grace aux évènements.
 		</div>
     </div>
 
@@ -36,6 +38,18 @@
     <div class="box_content border">
 		<div class="t3"><span class="surligne">Structure d'un extend</span></div>
 		<br />
+		Un extend se compose des éléments suivants:
+		<div class="bullet_paraph">
+		&bull; Le <span class="surligne">namespace</span> qui définit le context (scope) dans lequel la classe est créée.
+		<br />
+		&bull; La <span class="surligne">classe</span> qui le nom de la classe que l'on veut créer.
+		<br />
+		&bull; L'<span class="surligne">extendClass</span> qui est la classe que l'on veut étendre. La nouvelle classe issue de l'extend aura toutes les propiétés et méthodes de la classe étendue.
+		<br />
+		&bull; Le <span class="surligne">xtype</span> qui est le type Ext de l'élément représenté par la classe créée.
+		<br />
+		</div>
+		<br /><br />
 		<div>
 			<pre class="code brush:js">Ext.ns("namespace");
 
@@ -61,10 +75,14 @@ Ext.reg("my_xtype", namespace.classe);</pre>
 		<br />
     </div>
 
-    <br />
+	<br />
        
-     <div class="box_content border">
-		<div class="t3"><span class="surligne">Extension d'un Ext.Component</span></div><br>
+	<div class="box_content border">
+		<div class="t3"><span class="surligne">Extension d'un Ext.Component</span></div>
+		<br />
+		Dans l'extension d'un Ext.Component la méthode faisant office de constructeur est: <span class="surligne">initComponent</span>.<br />
+		C'est par exemple dans cette méthode, que l'on peut modifier l'affichage d'un composant graphique d'Ext JS, en remplaçant son template.
+		<br /><br />
 		<div>
 			<pre class="code brush:js">Ext.ns("Ext.ux");
 
@@ -93,7 +111,14 @@ Ext.reg("ux_panel", namespace.classe);</pre>
 	<br />
 	
     <div class="box_content border">
-		<div class="t3"><span class="surligne">onRender & afterRender</span></div><br>
+		<div class="t3"><span class="surligne">onRender & afterRender</span></div>
+		<br />
+		Ces deux methodes nous permetent de placer du code au rendu de l'Ext.Component.<br />
+		La méthodes <span class="surligne">onRender</span> est appelée apres l'insertion des éléments HTML du composant dans le DOM.<br />
+		La méthodes <span class="surligne">afterRender</span> est appelée apres l'insertion des éléments HTML de tous les enfants du composant dans le DOM.
+		<br /><br />
+		Pour éffectuer un "hook" sur onRender ou afterRender on peut placer un "listener" sur <span class="surligne">les évènements "render" ou "afterrender"</span> du composant. Ou simplement surcharger les méthodes sans oublier d'éffectuer les appels aux superClass.
+		<br /><br />
 		<div>
 			<pre class="code brush:js">Ext.ns("Ext.ux");
 
