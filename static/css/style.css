@@ -222,3 +222,7 @@ ul.html_list{
 .x-tree-node-leaf .x-tree-node-icon {
     background:url("../images/cmp.gif") no-repeat scroll 0 0 transparent;
 }
+
+.icon-class {
+    background:url("../images/class.gif") no-repeat scroll 0 0 transparent !important;
+}

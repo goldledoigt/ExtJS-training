@@ -136,13 +136,18 @@ Ext.onReady(function(){
 					url: './content/projet/index.html'
 				}]
 
+            }, {
+                text:"Playground"
+                ,leaf:true
+                ,iconCls:"icon-class"
+                ,href:"playground/"
 			}]
 
         }),
         rootVisible: false,
 		listeners:{
 			'click': function(node, e){	
-				if(node.leaf){
+				if(node.leaf && node.attributes.text !== "Playground"){
 					if (Ext.get(node.id+'-tab')){
 						panelCenter.setActiveTab(panelCenter.getItem(node.id+'-tab'));
 					}else{
