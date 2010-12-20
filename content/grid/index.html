@@ -29,8 +29,16 @@
 	<br />
 
     <div class="box_content border">
-		<div class="t3"><span class="surligne">Le store</span></div>
-		
+		<div class="t3"><span class="surligne">Le store</span></div><br>
+		Le store permet de gérer les données affichées dans le grid. <br><br>
+		Il peut <span class="surligne">récupérer</span> les données d'un Data Object de <span class="surligne">3 manières différentes</span> : <br>
+		<div class="bullet_paraph">
+		&bull; soit il récupère les données depuis une url définie dans sa configuration (DataProxy ou HttpProxy),<br>
+		&bull; soit les données sont passées directement au store dans l'option data,<br> 
+		&bull; soit les données sont passées manuellement au store à l'appel de la fonction loadData <br><br>
+		</div> 		
+		Ensuite, afin de pouvoir lire les données du Data Object le store a besoin d'un <span class="surligne">DataReader</span> qui va permettre reconnaître les champs et types de champs des données qu'il recoit. <br><br>
+		Le store permet de gérer différents types de données : <span class="surligne">Array, XML, ou JSON</span>. Suivant les besoins on pourra créer directement un Store de type ArrayStore, XmlStore, JsonStore, ...<br>
 		<br />
 		
 		<div>
@@ -61,6 +69,9 @@ var store = new Ext.data.ArrayStore({
      <div class="box_content border">
           	<div class="t3"><span class="surligne">Les colonnes</span></div>
 			<br />
+			Le ColumnModel permet de définir <span class="surligne">les colonnes qui vont être affichées</span> dans le Grid et la <span class="surligne">manière dont les données du store vont être affectées</span> à ces colonnes.<br><br>
+			Chaque colonne du ColumnModel doit contenir un <span class="surligne">dataIndex</span>. Le dataIndex permet de définir comment les données de chaque record du store sont indexées dans le ColumnModel.<br><br>
+			Les options de bases pouvant être définies pour chaque colonne sont le <span class="surligne">titre</span>, la <span class="surligne">largeur</span> de la colonne, la possibilité de tri avec l'option <span class="surligne">sortable</span>, la possibilité d'afficher ou non une colonne avec l'option<span class="surligne"> hideable</span>, et la possiblité d'appliquer une fonction au render avec l'option <span class="surligne">renderer</span> (très utile pour afficher une date au format voulu, appliquer un calcul, ...).<br><br>
 			<div>
 			<pre class="code brush:js">columns : [
 	{id:'company', header: 'Company', width: 160, sortable: true, dataIndex: 'company'},
@@ -76,6 +87,8 @@ var store = new Ext.data.ArrayStore({
 
     <div class="box_content border">
           	<div class="t3"><span class="surligne">La view</span></div><br>
+			La view représente l'interface utilisateur de la grid. Elle permet <span class="surligne">d'agir</span> sur le <span class="surligne">rendu global</span> de la grid. <br>
+			Elle permet par exemple de définir un affichage spécifique pour certaines lignes, de définir le comportement des colonnes au resize de la grid, ... <br><br>
           	<div>
 				<pre class="code brush:js">viewConfig: {
 	forceFit:true
@@ -87,6 +100,8 @@ var store = new Ext.data.ArrayStore({
 	
     <div class="box_content border">
           	<div class="t3"><span class="surligne">Le selection model</span></div><br>
+			Le selection model permet de définir le <span class="surligne">mode de sélection</span> des données du grid.<br>
+			ex : sélection d'une ou plusieurs ligne avec checkbox <br><br>
           	<div><pre class="code brush:js">var selModel = new Ext.grid.CheckboxSelectionModel();</pre></div>
 			<br />
     </div>
