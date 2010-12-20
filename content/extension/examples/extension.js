@@ -47,5 +47,6 @@ Ext.reg("uxgrid", Ext.ux.GridPanel);
 new Ext.ux.GridPanel({
 	width:400
 	,height:310
+	,frame:true
 	,title:"UX Grid"
 }).render("extension-exec");
