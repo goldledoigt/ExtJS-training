@@ -34,41 +34,99 @@
 	<br />
 	    
     <div class="box_content border">
-            <div class="t3"><span class="surligne">Structure d'un extend</span></div><br>
-            <ul class="html_list"><li></li></ul>
-            <ul class="html_list"><li></li></ul>
-            <ul class="html_list"><li></li></ul>
-			<br />
+		<div class="t3"><span class="surligne">Structure d'un extend</span></div>
+		<br />
+		<div>
+			<pre class="code brush:js">Ext.ns("namespace");
+
+namespace.classe = Ext.extend(extendedClass, {
+
+	constructor:function(config) {
+		// your code here
+		
+		// call of the extendedClass constructor method, with scope and initial config as parameters.
+		namespace.classe.superclass.constructor.call(this, config);
+		
+		// your code here
+	}
+	
+	,myMethod:function() {
+		// your code here
+	}
+
+});
+
+Ext.reg("my_xtype", namespace.classe);</pre>
+		</div>
+		<br />
     </div>
+
     <br />
        
      <div class="box_content border">
-          	<div class="t3"><span class="surligne">Constructeur</span></div><br>
-			<ul class="html_list"><li></li></ul>
-			<br />
-    </div
-	<br />
+		<div class="t3"><span class="surligne">Extension d'un Ext.Component</span></div><br>
+		<div>
+			<pre class="code brush:js">Ext.ns("Ext.ux");
 
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Variables publiques</span></div><br>
-          	<ul class="html_list"><li></li></ul>
-			<br />
+Ext.ux.Panel = Ext.extend(Ext.Panel, {
+
+	initComponent:function() {
+		// your code here
+
+		// call of the Ext.Panel initComponent method, with scope and function arguments as parameters.
+		Ext.ux.Panel.superclass.initComponent.apply(this, arguments);
+
+		// your code here
+	}
+
+	,myMethod:function() {
+		// your code here
+	}
+
+});
+
+Ext.reg("ux_panel", namespace.classe);</pre>
+		</div>
+		<br />
     </div>
-	<br>
+
+	<br />
 	
     <div class="box_content border">
-          	<div class="t3"><span class="surligne">Variables privées</span></div><br>
-          	<ul class="html_list"><li></li></ul>
-			<br />
-    </div>
-	<br>
-	
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Les évenements "render" et "afterrender"</span></div><br>
-          	<ul class="html_list"><li></li></ul>
-			<br />
-    </div>
-	<br>
+		<div class="t3"><span class="surligne">onRender & afterRender</span></div><br>
+		<div>
+			<pre class="code brush:js">Ext.ns("Ext.ux");
+
+Ext.ux.Panel = Ext.extend(Ext.Panel, {
+
+	initComponent:function() {
+		// your code here
+		Ext.ux.Panel.superclass.initComponent.apply(this, arguments);
+		// your code here
+		
+		this.on({
+			afterrender:function() {
+				// your code here
+			}
+		});
+
+	}
+
+	,onRender:function() {
+		// your code here
+		
+		// call of the Ext.Panel onRender method, with scope and function arguments as parameters.
+		Ext.ux.Panel.superclass.onRender.apply(this, arguments);
+	}
+
+});
+
+Ext.reg("ux_panel", namespace.classe);</pre>
+		</div>
+		<br />
+	</div>
+
+	<br />
 	
 			
 </div>
