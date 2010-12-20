@@ -114,7 +114,7 @@ var form = new Ext.ux.FormPanel({
 	renderTo:"interactions-exec"
 	,width:400
 	,height:150
-	,title:"Form"
+	,title:"UX Form"
 	,style:"margin-top:20px"
 });
 
