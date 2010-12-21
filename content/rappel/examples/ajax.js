@@ -10,10 +10,16 @@ var tpl = new Ext.XTemplate(
     ,{compiled:true}
 );
 
-new Ext.Button({
+var panel = new Ext.Panel({
+    border:false
+    ,height:200
+    ,autoWidth:true
+});
+
+var button = new Ext.Button({
     text:"Do Ajax request"
     ,handler:function() {
-        Ext.get("ajax-info").hide();
+        panel.body.hide();
         Ext.Ajax.request({
             url:"playground/data.json"
             ,params:{
@@ -21,9 +27,11 @@ new Ext.Button({
             }
             ,callback:function(options, success, response) {
                 var json = Ext.decode(response.responseText);
-                Ext.get("ajax-info").update(tpl.apply(json));
-                Ext.get("ajax-info").slideIn();
+                panel.update(tpl.apply(json));
+                panel.body.slideIn();
             }
         });
     }
-}).render("ajax-button");
+});
+
+this.exampleCmp = {border:false, items:[button, panel]};

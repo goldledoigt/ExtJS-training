@@ -19,13 +19,10 @@ var store = new Ext.data.ArrayStore({
 
 var selModel = new Ext.grid.CheckboxSelectionModel();
 
-new Ext.grid.GridPanel({
-	renderTo: 'grid-exec',
-	width: 400,
-	height: 310,
-	frame:true,
+this.exampleCmp = new Ext.grid.GridPanel({
 	title: 'Grid',
 	store: store,
+	frame: true,
 	viewConfig: {
 	    forceFit:true
 	},

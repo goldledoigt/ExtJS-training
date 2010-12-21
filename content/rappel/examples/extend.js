@@ -44,4 +44,4 @@ var user = new Person2();
 
 var details = user.getPrivateDetails("steve@gmail.com", "Steve is magic !");
 
-Ext.get("extend-exec").update("name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment + "<br />email: " + details.email);
+this.exampleCmp = {border:false, html:"name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment + "<br />email: " + details.email};

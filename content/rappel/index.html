@@ -13,46 +13,14 @@
 				<br /><br />
 				Il est possible de créer plusieurs instances d'une même classe grâce à l'appel "New".
 				<br /><br />
-				<div class="box_content">
-			        <div class="ex_container collapsed" id="class-container">
-			            <div class="exemple_link">
-			            	<div class="exemple_arrow" id="class-arrow"></div>
-			                <span class="exemple" id="class" done="ko">Création d'une classe</span>
-			            </div>
-			            <div class="box_ex" id="class-box" style="display: none">
-			                <div class="box_left">
-			                    <div id="class-exec"></div>                    
-			                </div>
-			                <div class="box_right border">
-			                    <pre id="class-pre" class="brush: js"></pre>
-			                </div>
-			                <div style="clear:both"></div>
-			             </div>
-			         </div>
-			    </div>
+				<div class="fieldset" example="rappel" url="examples/class.js" title="Exemple: création d'une class"></div>
 			</li>
 			<br />
 			<li>Singleton
 				<br /><br />
 				Le singleton quant à lui est un objet qui ne doit être instancié et initialisé qu'une fois.
 				<br /><br />
-			    <div class="box_content">
-			        <div class="ex_container collapsed" id="singleton-container">
-			            <div class="exemple_link">
-			            	<div class="exemple_arrow" id="singleton-arrow"></div>
-			                <span class="exemple" id="singleton" done="ko">Création d'un singleton</span>
-			            </div>
-			            <div class="box_ex" id="singleton-box" style="display: none">
-			                <div class="box_left">
-			                    <div id="singleton-exec"></div>                    
-			                </div>
-			                <div class="box_right border">
-			                    <pre id="singleton-pre" class="brush: js"></pre>
-			                </div>
-			                <div style="clear:both"></div>
-			             </div>
-			         </div>
-			    </div>
+				<div class="fieldset" example="rappel" url="examples/singleton.js" title="Exemple: création d'un singleton"></div>
 			</li>
 		</ul>
     </div>
@@ -69,23 +37,7 @@
 				La méthode call permet de changer le scope de la fonction appelée:<br />
 				fct.call(obj, p1, p2) exécute la fonction fct(p1,p2) comme si elle était définie à l'intérieur de l'objet obj.
 				<br /><br />
-				<div class="box_content">
-			        <div class="ex_container collapsed" id="call-container">
-			            <div class="exemple_link">
-			            	<div class="exemple_arrow" id="call-arrow"></div>
-			                <span class="exemple" id="call" done="ko">Utilisation de la méthode call()</span>
-			            </div>
-			            <div class="box_ex" id="call-box" style="display: none">
-			                <div class="box_left">
-			                    <div id="call-exec"></div>                    
-			                </div>
-			                <div class="box_right border">
-			                    <pre id="call-pre" class="brush: js"></pre>
-			                </div>
-			                <div style="clear:both"></div>
-			             </div>
-			         </div>
-			    </div>
+				<div class="fieldset" example="rappel" url="examples/call.js" title="Exemple: utilisation de la méthode call()"></div>
 			</li>
 			<br />
 			<li>apply(scope, [arg1, arg2, ...])
@@ -93,23 +45,7 @@
 				L'objectif de la méthode apply est le même celui de la méthode call, mais ses arguments sont différents:<br />
 				fct.apply(obj, args) a le même effet que call, mais les arguments sont regroupés dans un tableau.
 				<br /><br />
-				<div class="box_content">
-			        <div class="ex_container collapsed" id="apply-container">
-			            <div class="exemple_link">
-			            	<div class="exemple_arrow" id="apply-arrow"></div>
-			                <span class="exemple" id="apply" done="ko">Utilisation de la méthode apply()</span>
-			            </div>
-			            <div class="box_ex" id="apply-box" style="display: none">
-			                <div class="box_left">
-			                    <div id="apply-exec"></div>                    
-			                </div>
-			                <div class="box_right border">
-			                    <pre id="apply-pre" class="brush:js"></pre>
-			                </div>
-			                <div style="clear:both"></div>
-			             </div>
-			         </div>
-			    </div>
+				<div class="fieldset" example="rappel" url="examples/apply.js" title="Exemple: utilisation de la méthode apply()"></div>
 			</li>
 			<br />
 			<li>createDelagate(scope, [arg1, arg2, ...], argsIndex) : Function
@@ -117,23 +53,7 @@
 				L'objectif de createDelegate est également de changer le scope d'une fonction, mais sans l'exécuter. Cette méthode renvoie une référence à la fonction qui pourra etre exécutée ultérieurement.
 				createDelegate est une méthode d'ExtJS (class Function), contrairement à call et apply qui sont des fonctions Javascript.
 				<br /><br />
-				<div class="box_content">
-			        <div class="ex_container collapsed" id="createdelegate-container">
-			            <div class="exemple_link">
-			            	<div class="exemple_arrow" id="createdelegate-arrow"></div>
-			                <span class="exemple" id="createdelegate" done="ko">Utilisation de la méthode createDelegate()</span>
-			            </div>
-			            <div class="box_ex" id="createdelegate-box" style="display: none">
-			                <div class="box_left">
-			                    <div id="createdelegate-exec"></div>                    
-			                </div>
-			                <div class="box_right border">
-			                    <pre id="createdelegate-pre" class="brush:js"></pre>
-			                </div>
-			                <div style="clear:both"></div>
-			             </div>
-			         </div>
-			    </div>
+				<div class="fieldset" example="rappel" url="examples/createdelegate.js" title="Exemple: utilisation de la méthode createDelegate()"></div>
 			</li>
 		</ul>
 	
@@ -147,23 +67,7 @@
 		<br />
 		Ext.extend() étend une classe pour créer une sous-classe héritant des méthodes et propriétés de la classe mère. Il est alors possible de surcharger les méthodes de la classe étendue, sans oublier d'appeller le la superClass de la méthode.
 		<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="extend-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="extend-arrow"></div>
-	                <span class="exemple" id="extend" done="ko">Extension d'une classe avec Ext.extend()</span>
-	            </div>
-	            <div class="box_ex" id="extend-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="extend-exec"></div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="extend-pre" class="brush:js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
+		<div class="fieldset" example="rappel" url="examples/extend.js" title="Exemple: extension d'une classe avec Ext.extend()"></div>
 	</div>
 
 	<br />
@@ -173,47 +77,7 @@
 		<br />
 		Une requete Ajax est une méthode pour récupérer le contenu d'une page en javascript. Cette action est asynchrone et nécessite l'utilisation d'un "callback" pour récupérer le resultat de l'action. Dans l'exemple ci-dessous nous utilisons le singleton Ext.Ajax d'ExtJS.
 		<br /><br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="ajax-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="ajax-arrow"></div>
-	                <span class="exemple" id="ajax" done="ko">Création d'une requete Ajax</span>
-	            </div>
-	            <div class="box_ex" id="ajax-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="ajax-exec">
-							<div id="ajax-button"></div>
-	                    	<div id="ajax-info" style="height:200px"></div>
-	                    </div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="ajax-pre" class="brush:js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div>
-		<!-- <br />
-		<div class="box_content">
-	        <div class="ex_container collapsed" id="scripttagproxy-container">
-	            <div class="exemple_link">
-	            	<div class="exemple_arrow" id="scripttagproxy-arrow"></div>
-	                <span class="exemple" id="scripttagproxy" done="ko">Création d'une requete scripttagproxy avec ScriptTagProxy</span>
-	            </div>
-	            <div class="box_ex" id="scripttagproxy-box" style="display: none">
-	                <div class="box_left">
-	                    <div id="scripttagproxy-exec">
-							<div id="scripttagproxy-button"></div>
-	                    	<div id="scripttagproxy-info" style="height:200px"></div>
-	                    </div>                    
-	                </div>
-	                <div class="box_right border">
-	                    <pre id="scripttagproxy-pre" class="brush:js"></pre>
-	                </div>
-	                <div style="clear:both"></div>
-	             </div>
-	         </div>
-	    </div> -->
+		<div class="fieldset" example="rappel" url="examples/ajax.js" title="Exemple: création d'une requete Ajax"></div>
 	</div>
 	
 	<br />

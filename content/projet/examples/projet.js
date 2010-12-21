@@ -119,7 +119,7 @@ Ext.ux.Project = Ext.extend(Ext.Panel, {
                 ,ref:"form"
                 ,region:"south"
                 ,margins:"0 3 3 3"
-                ,height:140
+                ,height:90
             }]
         });
 
@@ -136,8 +136,4 @@ Ext.ux.Project = Ext.extend(Ext.Panel, {
 /**** RENDER
 ********************************************************************************/
 
-new Ext.ux.Project({
-    renderTo:"projet-exec"
-    ,height:310
-    ,width:400
-});
+this.exampleCmp = new Ext.ux.Project();

@@ -65,7 +65,7 @@ Ext.ux.FormPanel = Ext.extend(Ext.form.FormPanel, {
             ,items:[
         		{fieldLabel: 'First Name', name: 'firstname', allowBlank: false}
         		,{fieldLabel: 'Last Name', name: 'lastname'}
-        		,{fieldLabel: 'Email', name: 'email', vtype: 'email'}
+                // ,{fieldLabel: 'Email', name: 'email', vtype: 'email'}
         	]
         	,buttons:[{
                 text:"Save"
@@ -105,17 +105,26 @@ Ext.reg("uxform", Ext.ux.FormPanel);
 ********************************************************************************/
 
 var grid = new Ext.ux.GridPanel({
-	width:400
-	,height:150
+    autoWidth:true
+    ,height:130
 	,title:"UX Grid"
-}).render("interactions-exec");
+});
 
 var form = new Ext.ux.FormPanel({
-	renderTo:"interactions-exec"
-	,width:400
-	,height:150
+	autoWidth:true
+	,frame:true
+    ,flex:1
 	,title:"UX Form"
-	,style:"margin-top:20px"
 });
 
 form.relayEvents(grid, ["edit"]);
+
+this.exampleCmp = {
+    border:false
+    ,layout:{
+        type:"vbox"
+        ,align:"stretch"
+    }
+    ,defaults:{margins:'0 0 5 0'}
+    ,items:[grid, form]
+};

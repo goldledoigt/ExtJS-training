@@ -44,9 +44,9 @@ Ext.ux.GridPanel = Ext.extend(Ext.grid.GridPanel, {
 
 Ext.reg("uxgrid", Ext.ux.GridPanel);
 
-new Ext.ux.GridPanel({
+this.exampleCmp = new Ext.ux.GridPanel({
 	width:400
 	,height:310
 	,frame:true
 	,title:"UX Grid"
-}).render("extension-exec");
+});

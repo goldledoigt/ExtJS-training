@@ -22,4 +22,4 @@ var user = new Person();
 
 var details = user.getPrivateDetails();
 
-Ext.get("class-exec").update("name: " + user.name + "<br />age: " + details);
+this.exampleCmp = {border:false, html:"name: " + user.name + "<br />age: " + details};
