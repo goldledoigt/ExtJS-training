@@ -37,4 +37,4 @@ user2.lastName = "Brown";
 
 var details = user.getPrivateDetails.apply(user2, ["Steve is a bad boy !"]);
 
-Ext.get("apply-exec").update("name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment);
+this.exampleCmp = {border:false, html:"name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment};

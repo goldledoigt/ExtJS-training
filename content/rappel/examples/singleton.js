@@ -22,4 +22,4 @@ var Person = function() {
 
 var details = Person.getPrivateDetails();
 
-Ext.get("singleton-exec").update("name: " + Person.name + "<br />age: " + details);
+this.exampleCmp = {border:false, html:"name: " + Person.name + "<br />age: " + details};

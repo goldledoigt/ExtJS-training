@@ -26,12 +26,9 @@ function cancelForm() {
 }
 
 form = new Ext.FormPanel({
-	renderTo:"form-exec"
-	,frame:true
-	,width:400
-	,height:310
-	,title:"Form"
+	title:"Form"
 	,labelWidth:75
+	,frame:true
 	,defaults:{
 	    anchor:"-20"
 	    ,allowBlank:false
@@ -51,3 +48,5 @@ form = new Ext.FormPanel({
         ,handler:cancelForm
     }]
 });
+
+this.exampleCmp = form;

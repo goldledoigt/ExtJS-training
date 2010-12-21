@@ -40,4 +40,4 @@ var getPrivateDetails = user.getPrivateDetails.createDelegate(user2, ["steve@hot
 
 var details = getPrivateDetails("Steve is a Ninja !");
 
-Ext.get("createdelegate-exec").update("name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment + "<br />email: " + details.email);
+this.exampleCmp = {border:false, html:"name: " + details.name + "<br />age: " + details.age + "<br />comment: " + details.comment + "<br />email: " + details.email};
