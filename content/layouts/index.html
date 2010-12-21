@@ -4,7 +4,8 @@
 	<br>
 
     <div class="text_into">
-    	bla bla layouts<br><br>
+		Le layout engine de ExtJS permet de prendre en charge les problématiques de positionnement <span class="surligne">cross-browser</span>.<br>
+    	Il existe différents layouts permettant d'obtenir <span class="surligne">différents modes de positionnement</span> des élements dans un container. <br><br>
 		<ul class="html_list"><li><a target="_blank" href="http://dev.sencha.com/deploy/dev/examples/layout-browser/layout-browser.html">Exemples</a></li></ul>
 		<div class="bullet_paraph">
 
@@ -15,34 +16,88 @@
     
     <div class="box_content border">
             <div class="t3"><span class="surligne">Viewport</span></div><br>
+			Le Viewport est le container qui représente la fenêtre du browser.<br> 
+			Il est render dans le <span class="surligne">document.body</span> et s'adapte automatiquement aux changements de tailles du browser. <br>
+			C'est lui qui va contenir l'ensemble des élements de votre application ExtJS. On l'utilise généralement avec un BorderLayout.<br>    
 			<br />
     </div>
     <br />
-       
-     <div class="box_content border">
-          	<div class="t3"><span class="surligne">Colonnes</span></div><br>
-			<ul class="html_list"><li></li></ul>
-			<br />
-    </div
-	<br />
 
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Border</span></div><br>
+    <div class="box_content border">	         	
+		    <div class="box_img">
+	        	<img src="static/images/screenshots/border-layout.gif"> 
+	        </div>
+			<div class="box_txt">
+			<div class="t3"><span class="surligne">Border Layout</span></div><br>	
+			Le Border Layout est le type de layout le plus couramment utilisé. <br>
+			Il décompose l'espace en <span class="surligne">régions</span> : nord, sud, est, ouest, et centre. <br>
+			Seule la région centre est <span class="surligne">obligatoire</span>. <br><br>
           	<ul class="html_list"><li><a target="_blank" href="http://dev.sencha.com/deploy/dev/examples/layout/complex.html">Exemple de border layout</a></li></ul>
 			<br />
+			</div>
+			<div style="clear:both"></div>
     </div>
 	<br>
-	
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Vbox & Hbox</span></div><br>
-          	<ul class="html_list"><li></li></ul>
+
+     <div class="box_content border">
+		    <div class="box_img">
+	        	<img src="static/images/screenshots/layout-column.gif"> 
+	        </div>
+			<div class="box_txt">	
+          	<div class="t3"><span class="surligne">Colomn Layout</span></div><br>
+			Le layout Column est utile pour disposer des élements de hauteur variable dans plusieurs colonnes. 
 			<br />
+			</div>
+			<div style="clear:both"></div>			
+    </div
+	<br />
+	
+     <div class="box_content border">
+		    <div class="box_img">
+	        	<img src="static/images/screenshots/layout-table.gif"> 
+	        </div>
+			<div class="box_txt">	
+          	<div class="t3"><span class="surligne">Table Layout</span></div><br>
+			Le layout Table permet de gérer la disposition des élements comme dans un tableau HTML. 
+			<br />
+			</div>
+			<div style="clear:both"></div>			
+    </div
+	<br />
+		
+     <div class="box_content border">
+		    <div class="box_img">
+	        	<img src="static/images/screenshots/layout-accordion.gif"> 
+	        </div>
+			<div class="box_txt">	
+          	<div class="t3"><span class="surligne">Accordion Layout</span></div><br>
+			Le layout Accordion permet de créer une pile de panels, 1 seul panel pouvant être affiché à la fois. 
+			<br />
+			</div>
+			<div style="clear:both"></div>			
+    </div
+	<br />
+			
+    <div class="box_content border">
+		    <div class="box_img">
+		       	<img src="static/images/screenshots/layout-vbox.gif">
+				<img src="static/images/screenshots/layout-column.gif">
+		       </div>
+			<div class="box_txt">	
+		     	<div class="t3"><span class="surligne">Vbox & Hbox Layout</span></div><br><br>
+				Le layout Vbox permet de disposer les éléments en lignes, avec la possiblité de les étirer verticalement afin de remplir parfaitement le container parent.<br><br><br><br>
+				Le layout Hbox permet de disposer les éléments en colonnes, avec la possibilité de les étirer horizontalement afin de remplir le container parent.
+			<br />
+			</div>
+			<div style="clear:both"></div>	
     </div>
 	<br>
 	
     <div class="box_content border">
           	<div class="t3"><span class="surligne">Nested layouts</span></div><br>
-          	<ul class="html_list"><li></li></ul>
+			Chaque container peut avoir son propre layout. Ainsi on peut combiner différents types de layouts afin de créer toutes sortes d'interfaces.<br> 
+			Les possibilités sont infinies.  
+          	
 			<br />
     </div>
 	<br>

@@ -160,6 +160,19 @@ span.exemple {
     margin:0 8px 8px 8px;
 }
 
+.box_content .box_img{
+	position: relative;
+	float: right;
+	width: 20%;
+	margin-top: 15px;
+}
+
+.box_content .box_txt{
+	position: relative;
+	float: left;
+	width: 80%;	
+}
+
 .box_content .box_ex .box_left{
 	position: relative;
 	float: left;
