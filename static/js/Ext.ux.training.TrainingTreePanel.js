@@ -67,8 +67,8 @@ Ext.ux.training.TrainingTreePanel = Ext.extend(Ext.tree.TreePanel, {
             //     text:"Création d'un projet ExtJS"
             //     ,children:[{
             //         text:"Définition et assemblage du projet"
-            //         ,leaf:true
-            //         ,id:"projet"
+            //        ,leaf:true
+            //        ,id:"projet"
             //         ,url:"./content/projet/index.html"
             //     }]
             }, {
