@@ -1,4 +1,4 @@
-Ext.onReady(function() {                 
+Ext.onReady(function() {
 
 	Ext.QuickTips.init();
 
