@@ -83,9 +83,6 @@ Ext.ux.training.TrainingTreePanel = Ext.extend(Ext.tree.TreePanel, {
         
         this.on({
             click:this.fireEvent.createDelegate(this, ["nodeclick", this], 0)
-            // click:function(node, e) {
-            //     this.fireEvent.("nodeclick", this, node, e);
-            // }
         });
     }
 
