@@ -5,7 +5,8 @@
 	<br />
 
     <div class="text_into">
-    	bla la interactions
+    	ExtJS permet de faire interagir plusieurs components facilement en créant un minimum de dépendances entre eux dans le code.<br />
+		Dans l'exemple ci-dessous le FORM se rempli en fonction de la ligne sélectionnée dans le GRID.
 		<div class="bullet_paraph">
 
 		</div>
@@ -18,25 +19,37 @@
 	<br />
 
     <div class="box_content border">
-            <div class="t3"><span class="surligne">Communication entre 2 components (ex grid & form)</span></div><br>
-
-			<br />
+		<div class="t3"><span class="surligne">Créer un évènement</span></div>
+		<br />
+		L'utilisation des évènements ExtJS permet de faire communiquer deux composants ExtJS sans créer de dépendance entre eux dans le code. Les composants ExtJS on leur propres évènements référencés dans l'API, mais lors de leur surcharge il est possible dans créer de nouveaux.<br /><br />
+		Dans notre example le GRID déclenche un évènement lorsqu'une de ses ligne est sélectionnée. Sur le "handler" de cet évènement nous déclenchons à notre tour un autre évènement personnalisé: "edit".<br /><br />
+		<div>
+			<pre class="code brush:js">,onRowSelect:function(selModel, rowIndex, record) {
+	this.fireEvent("edit", record);
+}</pre>
+		</div>
+		<br />
     </div>
+
     <br />
        
      <div class="box_content border">
-          	<div class="t3"><span class="surligne">Gestion des évènements</span></div><br>
-
-			<br />
+		<div class="t3"><span class="surligne">Relayer un évènement</span></div>
+		<br />
+		Il est possible de relayer un évènement et de faire en sorte qu'un composant ExtJS écoute les évènements d'autre composants. Dans notre exemple l'évènement "edit" du GRID est relayer au FORM.
+		<br /><br />
+		<div>
+			<pre class="code brush:js">form.relayEvents(grid, ["edit"]);</pre>
+		</div><br /><br />
+		Et un "handler" de l'évènement "edit" est placé dans le FORM.
+		<br /><br />
+		<div>
+			<pre class="code brush:js">this.on({
+	edit:this.onEdit
+});</pre>
+		</div><br /><br />
+		Ainsi tout déclenchement de l'évènement "edit"dans le GRID appelera la méthode faisant office de "handler" dans le form.
     </div
 	<br />
-
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Gestion du scope</span></div><br>
-
-			<br />
-    </div>
-	<br>
-	
 			
 </div>

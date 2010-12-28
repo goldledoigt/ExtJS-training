@@ -57,20 +57,20 @@ Ext.ux.training.TrainingTreePanel = Ext.extend(Ext.tree.TreePanel, {
                     ,leaf:true
                     ,id:"extension"
                     ,url:"./content/extension/index.html"
-                // },{
-                //     text:"Interactions entre 2 components"
-                //     ,leaf:true
-                //     ,id:"interactions"
-                //     ,url:"./content/interactions/index.html"
+                },{
+                    text:"Interactions entre 2 components"
+                    ,leaf:true
+                    ,id:"interactions"
+                    ,url:"./content/interactions/index.html"
                 }]
-            // },{
-            //     text:"Création d'un projet ExtJS"
-            //     ,children:[{
-            //         text:"Définition et assemblage du projet"
-            //         ,leaf:true
-            //         ,id:"projet"
-            //         ,url:"./content/projet/index.html"
-            //     }]
+            },{
+                text:"Création d'un projet ExtJS"
+                ,children:[{
+                    text:"Définition et assemblage du projet"
+                    ,leaf:true
+                    ,id:"projet"
+                    ,url:"./content/projet/index.html"
+                }]
             }, {
                 text:"Playground"
                 ,leaf:true

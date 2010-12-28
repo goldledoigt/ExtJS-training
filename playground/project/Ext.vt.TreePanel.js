@@ -6,7 +6,7 @@ Ext.vt.TreePanel = Ext.extend(Ext.tree.TreePanel, {
 
         var loader = new Ext.tree.TreeLoader({
             dataUrl:"controller.php",
-            getParams: function(node) {
+            getParams:function(node) {
                 return {
                     xaction:"getGroups"
                     ,id:node.attributes.groupId || ""

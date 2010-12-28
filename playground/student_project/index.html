@@ -10,16 +10,22 @@
 		<script type="text/javascript" src="/lib/ext/adapter/ext/ext-base-debug.js"></script>
 		<script type="text/javascript" src="/lib/ext/ext-all-debug.js"></script>
 
-		<script type="text/javascript" src="./Ext.vt.Window.js"></script>
 		<script type="text/javascript" src="./UsersWindow.js"></script>
 		<script type="text/javascript" src="./ExtLogPanel.js"></script>
-		<script type="text/javascript" src="./Ext.vt.LogPanel.js"></script>
-		<script type="text/javascript" src="./Ext.vt.FormPanel.js"></script>
-		<script type="text/javascript" src="./Ext.vt.GridPanel.js"></script>
-		
-		<script type="text/javascript" src="./Ext.vt.TreePanel.js"></script>
-		<script type="text/javascript" src="./Ext.vt.Viewport.js"></script>
-		<script type="text/javascript" src="./main.js"></script>
+		<script type="text/javascript" src="./UserGrid.js"></script>
+		<script type="text/javascript" src="./UsersForm.js"></script>
+		<script type="text/javascript" src="./tree.js"></script>
+		<script type="text/javascript" src="./Ext.ux.Viewport.js"></script>
+
+		<script>
+			Ext.onReady(function() {
+
+			    Ext.QuickTips.init();
+
+			    new Ext.ux.Viewport();
+
+			});
+		</script>
 
 	</head>
 

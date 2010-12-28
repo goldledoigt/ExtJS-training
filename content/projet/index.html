@@ -4,37 +4,59 @@
 	<br>
 
 	<div class="text_into">
-    	Nous allons aborder les différentes étapes de la création d'un projet ExtJS.
+    	Nous allons assembler nos deux composants ExtJS (GRID & FORM) pour un faire un module.
     </div>
-    <br /><br>
-
-	<div class="fieldset" example="projet" url="examples/projet.js" title="Exemple: création d'un projet"></div>
+    <br /><br />
 	    
     <div class="box_content border">
-            <div class="t3"><span class="surligne">Définition du projet</span></div><br>
-			Reprrenons l'exemple du form permettant d'éditer les données d'un grid. <br><br>
-			Nous allons créer un projet qui va contenir ces 2 components et qui va gérer les évenements entre les 2 composants :<br>
-			<div class="bullet_paraph">
-				&bull; il nous faut donc un container pour intégrer les 2 components : prenons un panel <br>
-				&bull; il faut égalemnt choisir le layout du panel pour gérer la disposition des 2 components : prenons un layout border<br>
-			</div><br>
-			Nous allons placer le grid dans la région centre du panel et le form dans la région sud (par exemple). <br>
-			<br />
+		<div class="t3"><span class="surligne">Définition du projet</span></div>
+		<br />
+		Reprrenons l'exemple du form permettant d'éditer les données d'un grid.<br /><br />
+		Nous allons créer un projet qui va contenir ces 2 components et qui va gérer les évenements entre les 2 composants :<br />
+		<div class="bullet_paraph">
+			&bull; il nous faut donc un container pour intégrer les 2 components : prenons un panel<br />
+			&bull; il faut égalemnt choisir le layout du panel pour gérer la disposition des 2 components : prenons un layout border<br />
+		</div>
+		<br />
+		Nous allons placer le grid dans la région centre du panel et le form dans la région sud (par exemple).<br />
+		<br />
     </div>
+
+	<br />
+
+	<div class="fieldset" example="projet" url="examples/projet.js" title="Exemple: création d'un projet"></div>
+
     <br />
-       
 
     <div class="box_content border">
-          	<div class="t3"><span class="surligne">Création des classes (extend VS override)</span></div><br>
-
-			<br />
-    </div>
-	<br>
-
-    <div class="box_content border">
-          	<div class="t3"><span class="surligne">Assemblage</span></div><br>
-
-			<br />
+		<div class="t3"><span class="surligne">Assemblage du projet</span></div>
+		<br />
+		Pour associer deux composants ExtJS nous avons besoins de passer par un troisième composants.<br />
+		Dans notre exemple ce dernier composant nous sert à deux points de vue:
+		<div class="bullet_paraph"><br />
+			&bull; Le choix du "layout" qui déterminera la façon dont le GRID et le FORM seront agencés à l'affichage.
+			<br /><br />
+			<div><pre class="code brush:js">layout:"border"</pre></div>
+			<br /><br />
+			&bull; La gestion des évènements qui va établir la communication entre le GRID et le FORM.
+			<br /><br />
+			Sur le GRID pour faire remonter l'évènement "edit" déclenché à chaque selection de ligne:
+			<br /><br />
+			<div><pre class="code brush:js">,bubbleEvents:["edit"]</pre></div>
+			<br /><br />
+			Sur le FORM pour faire remonter l'évènement "save" déclenché lorsque le formulaire a été enregistré avec succès:
+			<br /><br />
+			<div><pre class="code brush:js">,bubbleEvents:["save"]</pre></div>
+			<br /><br />
+			Puis on place les "handler" pour ces évènements:
+			<br /><br />
+			<div><pre class="code brush:js">this.on({
+	edit:{scope:this.form, fn:this.form.onEdit}
+	,save:{scope:this.grid, fn:this.grid.onSave}
+});</pre></div>
+			<br /><br />
+		</div>
+		<br />
     </div>	
 			
 </div>
